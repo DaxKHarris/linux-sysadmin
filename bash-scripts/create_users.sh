@@ -49,6 +49,7 @@ sudo useradd -m "$username"
 # === Set default pass and force change at first login ===
 echo "$username:${default_pass}" | sudo chpasswd
 sudo chage -d 0 "$username"
+sudo chage -M 90 -m 7 -W 14 "$username"
 
 # === Add to admin group if requested ===
 if [[ $admin_flag == true ]]; then
