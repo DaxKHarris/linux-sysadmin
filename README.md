@@ -61,6 +61,9 @@ A Bash script that applies basic SSH security hardening aligned with DoD and STI
 - Basic security policy implementation
 - `systemctl` service control
 
+### TODO:
+Make port number user-defined via CLI argument instead of hard coding.
+
 
 ---
 
