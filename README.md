@@ -31,6 +31,20 @@ A secure Bash script to automate the onboarding of new users.
 - Input validation and conditional logic with `case`, `[[ ]]`
 - Group-based sudo access via `/etc/sudoers`
 
+## 🔧 Project: `backup_home.sh`
+
+A Bash script that backs up a user's home directory into a compressed archive with a timestamp.
+
+### 🛠️ Features
+- Checks if user and home folder exist
+- Creates backup folder if missing
+- Compresses and timestamps the backup
+- Outputs clean success/failure messages
+
+### 💡 Skills Used
+- `tar`, `date`, `id`, `mkdir -p`, input validation
+
+
 ---
 
 
