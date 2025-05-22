@@ -44,6 +44,23 @@ A Bash script that backs up a user's home directory into a compressed archive wi
 ### 💡 Skills Used
 - `tar`, `date`, `id`, `mkdir -p`, input validation
 
+## 🔧 Project: `harden_ssh.sh`
+
+A Bash script that applies basic SSH security hardening aligned with DoD and STIG best practices.
+
+### 🛠️ Features
+- Backs up the original `/etc/ssh/sshd_config` file before making changes
+- Disables root login to prevent unauthorized superuser access
+- Changes the default SSH port to reduce bot-driven attacks
+- Disables password authentication to enforce key-based login
+- Restarts the SSH service to apply all changes
+
+### 💡 Skills Used
+- `sed` for in-place config editing
+- File backup and path management
+- Basic security policy implementation
+- `systemctl` service control
+
 
 ---
 
