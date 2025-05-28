@@ -1,5 +1,6 @@
 #!/bin/bash
 
+source ../conf/sysadmin/security.env
 # === Setup ===
 config="/etc/ssh/sshd_config"
 backup="/etc/ssh/sshd_config.bak"
