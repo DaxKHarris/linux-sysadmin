@@ -2,7 +2,11 @@
 
 day=$(date +%Y-%m-%d)
 time=$(date +%H:%M:%S)
-LOG_FILE="./system-${day}.log"
+BASH_HOME="/home/daxkharris/Documents/Git/sysadmin/bash-scripts/healthcheck"
+
+
+
+
 
 log() {
     echo "$1"
@@ -14,7 +18,10 @@ log() {
 if [ -n "$1" ]; then
     case $1 in
         --log)
+            LOG_DIR="$BASH_HOME/logs"
+            LOG_FILE="$BASH_HOME/logs/system-${day}.log"
             LOG_ENABLED=true
+            mkdir -p ${LOG_DIR}
             ;;
         -*)
             echo "Invalid Argument"
@@ -27,6 +34,11 @@ if [ -n "$1" ]; then
     esac
         
 fi
+log "Compressing files $(find "$LOG_DIR" -type f -name '*.log' -mtime +1)"
+find "$LOG_DIR" -type f -name "*.log" -mtime +1 -exec gzip {} +
+
+log "Deleting files $(find "$LOG_DIR" -type f -name '*.log.gz' -mtime +7)"
+find "$LOG_DIR" -type f -name "*.log.gz" -mtime +7 -exec rm {} +
 
 log "===== System Health Report (${day} ${time}) ====="
 log ""
