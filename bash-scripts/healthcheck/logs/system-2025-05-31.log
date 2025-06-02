@@ -1,0 +1,35 @@
+===== System Health Report (2025-05-31 12:49:34) =====
+
+--- CPU Usage ---
+User: 26.6 System: 31.4 Idle: 39.4
+
+--- Memory Usage ---
+Total: 30Gi Used: 8.6Gi Available: 22Gi
+
+--- Disk Usage ---
+Filesystem      Size  Used Avail Use% Mounted on
+/dev/nvme0n1p2  456G  114G  319G  27% /
+
+--- Network Status ---
+Offline
+
+Compressing files /home/daxkharris/Documents/Git/sysadmin/bash-scripts/healthcheck/logs/system-2025-05-28.log
+/home/daxkharris/Documents/Git/sysadmin/bash-scripts/healthcheck/logs/system-2025-05-29.log
+Deleting files 
+===== System Health Report (2025-05-31 14:12:49) =====
+
+--- CPU Usage ---
+User: 4.0 System: 1.7 Idle: 92.5
+
+--- Memory Usage ---
+Total: 30Gi Used: 8.3Gi Available: 22Gi
+
+--- Disk Usage ---
+Filesystem      Size  Used Avail Use% Mounted on
+/dev/nvme0n1p2  456G  114G  319G  27% /
+
+--- Network Status ---
+Online
+
+Compressing files 
+Deleting files 

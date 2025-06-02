@@ -15,6 +15,17 @@ log() {
     fi
 }
 
+cleanup() {
+log "Compressing files $(find "$LOG_DIR" -type f -name '*.log' -mtime +1)"
+find "$LOG_DIR" -type f -name "*.log" -mtime +1 -exec gzip {} +
+
+log "Deleting files $(find "$LOG_DIR" -type f -name '*.log.gz' -mtime +7)"
+find "$LOG_DIR" -type f -name "*.log.gz" -mtime +7 -exec rm {} +
+exit 0
+}
+
+trap cleanup EXIT SIGINT SIGTERM
+
 if [ -n "$1" ]; then
     case $1 in
         --log)
@@ -34,11 +45,7 @@ if [ -n "$1" ]; then
     esac
         
 fi
-log "Compressing files $(find "$LOG_DIR" -type f -name '*.log' -mtime +1)"
-find "$LOG_DIR" -type f -name "*.log" -mtime +1 -exec gzip {} +
 
-log "Deleting files $(find "$LOG_DIR" -type f -name '*.log.gz' -mtime +7)"
-find "$LOG_DIR" -type f -name "*.log.gz" -mtime +7 -exec rm {} +
 
 log "===== System Health Report (${day} ${time}) ====="
 log ""
