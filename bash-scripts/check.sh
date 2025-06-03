@@ -2,7 +2,7 @@
 
 day=$(date +%Y-%m-%d)
 time=$(date +%H:%M:%S)
-BASH_HOME="/home/daxkharris/Documents/Git/sysadmin/bash-scripts/healthcheck"
+SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 
 
 
@@ -29,8 +29,8 @@ trap cleanup EXIT SIGINT SIGTERM
 if [ -n "$1" ]; then
     case $1 in
         --log)
-            LOG_DIR="$BASH_HOME/logs"
-            LOG_FILE="$BASH_HOME/logs/system-${day}.log"
+            LOG_DIR="$SCRIPT_DIR/../logs"
+            LOG_FILE="$SCRIPT_DIR/../logs/app.log"
             LOG_ENABLED=true
             mkdir -p ${LOG_DIR}
             ;;
