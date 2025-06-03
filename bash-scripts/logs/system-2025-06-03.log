@@ -1,0 +1,17 @@
+===== System Health Report (2025-06-03 10:00:59) =====
+
+--- CPU Usage ---
+User: 57.9 System: 33.3 Idle: 5.4
+
+--- Memory Usage ---
+Total: 30Gi Used: 11Gi Available: 19Gi
+
+--- Disk Usage ---
+Filesystem      Size  Used Avail Use% Mounted on
+/dev/nvme1n1p2  456G  118G  315G  28% /
+
+--- Network Status ---
+Offline
+
+Compressing files 
+Deleting files 

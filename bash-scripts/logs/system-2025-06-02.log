@@ -1,0 +1,17 @@
+===== System Health Report (2025-06-02 16:12:36) =====
+
+--- CPU Usage ---
+User: 0.6 System: 0.6 Idle: 97.8
+
+--- Memory Usage ---
+Total: 30Gi Used: 1.2Gi Available: 29Gi
+
+--- Disk Usage ---
+Filesystem      Size  Used Avail Use% Mounted on
+/dev/nvme1n1p2  456G  118G  315G  28% /
+
+--- Network Status ---
+Online
+
+Compressing files /home/daxkharris/Documents/Git/sysadmin/bash-scripts/healthcheck/logs/system-2025-05-31.log
+Deleting files 

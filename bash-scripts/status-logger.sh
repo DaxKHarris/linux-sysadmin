@@ -14,7 +14,7 @@ NC='\e[0m'
 my_services=("sshd" "NetworkManager" "iptables" "cronie")
 
 log() {
-    echo -e "$2$1$NC"
+    echo -e "$2 $1$NC"
     echo "${1}" | sudo tee -a $LOG > /dev/null
 }
 
